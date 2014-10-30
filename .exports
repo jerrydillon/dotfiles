@@ -1,0 +1,50 @@
+# Make vim the default editor
+export EDITOR="vim";
+
+# Larger bash history (allow 32³ entries; default is 500)
+export HISTSIZE=32768;
+export HISTFILESIZE=$HISTSIZE;
+export HISTCONTROL=ignoredups;
+# Make some commands not show up in history
+export HISTIGNORE="ls:cd:cd -:pwd:exit:date:* --help";
+
+# Prefer US English and use UTF-8
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="${yellow}";
+
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X";
+
+# Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto";
+
+# Link Homebrew casks in `/Applications` rather than `~/Applications`
+export HOMEBREW_CASK_OPTS="--appdir=/Applications";
+
+# Tomcat paths
+export CATALINA_HOME=$HOME/Library/Tomcat/Home
+export PATH=$PATH:$HOME/Developer/scripts:$HOME/bin:/usr/bin:$CATALINA_HOME
+
+# gem paths
+export GEM_HOME=$HOME/gems
+export PATH=$GEM_HOME/bin:$PATH
+
+alias macwired='ifconfig en0 | grep ether'
+alias macwireless='ifconfig en1 | grep ether'
+
+#export ANDROID_HOME="/opt/android-sdk"
+#export ANDROID_SDK_ROOT="/opt/android-sdk"
+
+#export GRADLE_HOME="/opt/gradle"
+#export PATH=$PATH:$GRADLE_HOME/bin
+
+#export PATH=$PATH:$HOME/dex2jar
+
+
+#export CLICOLOR=1
+#export LSCOLORS="gxfxcxdxbxegedabagacad"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

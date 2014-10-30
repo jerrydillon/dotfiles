@@ -1,0 +1,41 @@
+[user]
+	name = Jerry Dillon
+	email = jerry.w.dillon@lowes.com
+[core]
+	excludesfile = /Users/jdillon/.gitignore_global
+[mergetool "sourcetree"]
+	cmd = /usr/local/bin/bcomp $LOCAL $REMOTE $BASE $MERGED
+	trustExitCode = true
+#[difftool "Kaleidoscope"]
+#        cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
+
+[push]
+        default = simple
+[color]
+        ui = true
+
+[difftool "sourcetree"]
+	cmd = /Applications/P4Merge/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+
+[mergetool "sourcetree"]
+        cmd = /Applications/P4Merge/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+        trustExitCode = true
+[merge]
+        tool = sourcetree
+
+[mergetool]
+        prompt = false
+
+[mergetool "custom"]
+        cmd = /Applications/P4Merge/p4merge.app/Contents/Resources/launchp4merge "$PWD/$BASE" "$PWD/$REMOTE" "$PWD/$LOCAL" "$PWD/$MERGED"
+        keepTemporaries = false
+        trustExitCode = false
+    keepBackup = false
+
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative 
+    st = status
+    logg = log --graph --decorate --oneline --abbrev-commit --all
+[color]
+        ui = auto

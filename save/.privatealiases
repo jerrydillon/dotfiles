@@ -1,0 +1,13 @@
+#!/bin/sh
+
+alias ll='ls -al'
+
+alias cwks='cd ~/Developer/workspace/git/objective-c'
+alias jwks='cd ~/Developer/workspace/git/java'
+alias capp='cd ~/Developer/workspace/git/objective-c/LowesConsumeriPhoneApp'
+alias cmod='cd ~/Developer/workspace/git/objective-c/LowesConsumeriPhoneModel'
+alias ccart='cd ~/Developer/workspace/git/objective-c/LOWESShoppingCart'
+alias cpprop='cd ~/Developer/workspace/git/objective-c/config-prod/mobile-app-properties'
+alias cprop='cd ~/Developer/workspace/git/objective-c/mobile-app-properties'
+alias cder='cd ~/Library/Developer/Xcode/DerivedData'
+alias purged='rm -f ~/Library/Developer/Xcode/DerivedData/*'
